@@ -1,5 +1,5 @@
-# Design
+# Files
 
 ## Overview
 
-This directory contains a visual history of screenshots, whiteboards, and other design related documents.
+This directory contains file objects that are a part of the history of Sprint.ly. Pictures, wireframes, code you want to preserve, etc.
