@@ -1,0 +1,3 @@
+# Sprint Planning Mockups
+
+We originally planned to include sprints in Sprint.ly. Here's the proof! That being said, as Graham and I started building the tool we kept punting on building out this feature. Eventually, we decided that it didn't fit our workflow and a lot of other "agile" shops we knew were doing SINO (Sprints In Name Only) so we ended up ditching them.
