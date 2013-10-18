@@ -3,3 +3,20 @@
 ## Overview
 
 Effective communication is critical for a team, company, or product to be successful. This document outlines how we expect employees to communicate with each other.
+
+## Guiding Principle
+
+It is best to prefer asynchronous communication unless there is a reason to use something else. In terms of escalation, that looks something like:
+
+Sprint.ly ticket -> email -> group chat -> IM -> video call/in person
+
+This allows people to stay focused on their task and not break their train of thought. If possible, try to plan for those things you'll need such that you don't have to resort to synchronous communication (for instance, because you're blocked). That said, it is more important that you talk to someone when you need it than it to be asynchronous.
+
+## Mediums
+### Group Chat
+
+We use group chat as a release mechanism, talking about non-work things along side production outages. As such, employees are expected to hang out there. It is important to get to know your coworkers on a personal level and this helps with remote teams.
+
+### Video Conferencing
+
+Face-to-Face communication is useful for broadcast-style messaging and higher bandwitdh communication. It is also very useful in that it provides a human element, allowing you to connect with the other person you are talking to. For this reason, we use it. That said, this should be used sparingly, preferring instead asynchornous communication where possible.
