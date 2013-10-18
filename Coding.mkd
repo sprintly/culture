@@ -36,20 +36,45 @@ Similarly, we do not encourage NIH or Not Invented Here syndrome in which a comp
 
 Legibility of code is paramount. As such, naming is important and should clearly identify intent. Prefer `index` over `idx`. This is not 2002 and vowels aren't a bad thing. One caveat to this rule is when it goes against community guidelines (such as using `i`, `j`, and `k` for loop variables).
 
-Code comments play a large role when it comes to clarity. Commenting is necessary when coding in teams. Docstrings highlighting the function of a code block are encouraged. Line-level comments are discouraged however, preferring instead declarative functions. Take this example code:
+Code comments play a large role when it comes to clarity. Commenting is necessary when coding in teams. Docstrings highlighting the function of a code block are encouraged. Line-level comments that explain what is happening are discouraged, preferring instead declarative functions. Line level comments explaining why something is happening are fine. 
 
-    def get_services(request):
-        # Product pks where the user is an admin.
-        product_pks =  [m.product.pk for m in
-            filter(lambda m: m.admin, request.user.my_memberships())]
+Take this example code:
+
+
+    def myfunc():
+        ...
+        # Find the last day of the month.
+        first_day, last_day = calendar.monthrange(day.year, day.month)
+        start = timezone.make_aware(datetime(year=day.year, month=day.month,
+            day=day.day), timezone.utc)
+        stop = timezone.make_aware(datetime(year=day.year, month=day.month,
+            day=last_day), timezone.utc)
+        ...
+
 
 This would be clearer written as:
 
-    def pks_of_products(user, matcher=lambda member: True):
-        return [m.product.pk for m in filter(matcher, request.user.my_memberships())]
-    
-    def get_services(request):
-        product_pks = pks_of_products(request.user, lambda member: member.is_admin())
+     def first_and_last_day_of_month(day):
+          first_day, last_day = calendar.monthrange(day.year, day.month)
+          start = timezone.make_aware(datetime(year=day.year, month=day.month,
+              day=day.day), timezone.utc)
+          stop = timezone.make_aware(datetime(year=day.year, month=day.month,
+              day=last_day), timezone.utc)
+          return start, stop
+
+
+    def myfunc():
+        ...
+        start, stop = first_and_last_day_of_month(day)
+        ...
+
+
+Okay use of inline comments:
+
+    for acct in to_deactivate:
+        # Unfortunately, recurly won't handle our trial accounts, so we
+        # must handle those ourself.
+        acct.expire()
 
 ### Automation over one-off.
 
