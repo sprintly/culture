@@ -1,0 +1,9 @@
+# Traditions
+
+## Overview
+
+This document outlines the observed traditions at Sprint.ly. 
+
+## Monday Morning Standups
+
+Every Monday morning we set aside time to join a Google Hangout and discuss what everyone is working on, any blockers, disseminate company information, etc. These are informal, company-wide standups that include everyone, including the executive team.
