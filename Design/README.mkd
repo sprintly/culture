@@ -1,0 +1,5 @@
+# Design
+
+## Overview
+
+This directory contains a visual history of screenshots, whiteboards, and other design related documents.
