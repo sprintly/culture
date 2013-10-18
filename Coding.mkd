@@ -36,7 +36,20 @@ Similarly, we do not encourage NIH or Not Invented Here syndrome in which a comp
 
 Legibility of code is paramount. As such, naming is important and should clearly identify intent. Prefer `index` over `idx`. This is not 2002 and vowels aren't a bad thing. One caveat to this rule is when it goes against community guidelines (such as using `i`, `j`, and `k` for loop variables).
 
-Code comments play a large role when it comes to clarity. Commenting is necessary when coding in teams. Docstrings highlighting the function of a code block are encouraged. 
+Code comments play a large role when it comes to clarity. Commenting is necessary when coding in teams. Docstrings highlighting the function of a code block are encouraged. Line-level comments are discouraged however, preferring instead declarative functions. Take this example code:
+
+    def get_services(request):
+        # Product pks where the user is an admin.
+        product_pks =  [m.product.pk for m in
+            filter(lambda m: m.admin, request.user.my_memberships())]
+
+This would be clearer written as:
+
+    def pks_of_products(user, matcher=lambda member: True):
+        return [m.product.pk for m in filter(matcher, request.user.my_memberships())]
+    
+    def get_services(request):
+        product_pks = pks_of_products(request.user, lambda member: member.is_admin())
 
 ### Automation over one-off.
 
