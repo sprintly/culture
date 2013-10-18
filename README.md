@@ -10,3 +10,4 @@ Anyone associated with Sprint.ly, including our customers and partners, should f
 
  * Edits should attempt to avoid [fallacies](http://en.wikipedia.org/wiki/List_of_fallacies) and [cognitive biases](http://en.wikipedia.org/wiki/List_of_cognitive_biases) when making their cases for inclusion of contributions. We prefer to follow objective data and arguments.
  * At the end of the day our employees are building this product and company. As a result, all edits *must* have their support. If you are an employee, this means you'll need to state your case and get your peers on board. If you are external to the company, we encourage you first contact us via [support](https://sprint.ly/docs) if you think our employees would be averse to your edits.
+ * We use [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax to format these documents.
