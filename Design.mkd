@@ -1,8 +1,12 @@
 # Design
 
+## Design Ethos
 * Everyone can design
 * Everyone at Sprint.ly *will* design
 * Great ideas can come from anyone
 * Feedback is not only encouraged but critical for the iterative evolution of Sprint.ly
 * Try and receive as much input and feedback as time allows
 * Ask questions
+
+
+## Design Lifecycle
