@@ -13,3 +13,7 @@ Every company has its creation myths. This document will attempt to outline the 
 ## Founding
 
 Sprint.ly was originally founded as company in March of 2011 by Chris, Joe, and Graham. Sage.ly was originally envisioned as a lifestyle business comprised of a bunch of SaaS applications, of which Sprint.ly was one of them. When Graham and Joe decided to work on Sprint.ly full-time, Chris decided he'd stick with Media Temple and advise the company rather than joining us full-time.
+
+## Launch
+
+Sprint.ly was launched into private invite-only beta on December 3rd, 2011. At the time it was covered by [TechCrunch](http://techcrunch.com/2011/12/03/joe-stump-launches-sprintly/).
