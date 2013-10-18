@@ -36,6 +36,8 @@ Similarly, we do not encourage NIH or Not Invented Here syndrome in which a comp
 
 Legibility of code is paramount. As such, naming is important and should clearly identify intent. Prefer `index` over `idx`. This is not 2002 and vowels aren't a bad thing. One caveat to this rule is when it goes against community guidelines (such as using `i`, `j`, and `k` for loop variables).
 
+Code comments play a large role when it comes to clarity. Commenting is necessary when coding in teams. Docstrings highlighting the function of a code block are encouraged. 
+
 6. Automation over one-off.
 
 It is important that we all try to remove ourselves from the critical path as much as possible. As such, we must codify our knowledge in text (preferrably in the form of source code). The way we do this is automation. We seek automation of our infrastructure and deployment process such that it can be done by anyone for this very reason.
