@@ -2,7 +2,7 @@
 
 ## Overview
 
-Sprint.ly developers technology products. This requires us to write a lot of code. This document outlines how we approach technology and how we like to code.
+Sprint.ly develops technology products. This requires us to write a lot of code. This document outlines how we approach technology and how we like to code.
 
 ## General Principles
 
