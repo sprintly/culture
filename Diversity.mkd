@@ -1,0 +1,9 @@
+# Diversity
+
+## Overview
+
+Sprint.ly [believes diversity is a competitive advantage](http://blog.sprint.ly/post/58342376145/diversity-is-an-advantage-in-business-product). This document outlines our approach to building a diverse team.
+
+## Goals
+
+ * To have one employee on each continent by the end of 2015.
