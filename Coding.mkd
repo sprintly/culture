@@ -12,7 +12,7 @@ Syntatic arguments around code are a waste of time. Standards that can be valida
 
 2. Tests as a driver for well factored code.
 
-Code is tested because it prevents regressions, but also because it positively influences the design of software. Code that is painful to test is likely poorly factored.
+Code is tested because it prevents regressions, but also because it positively influences the design of software. Code that is painful to test is likely poorly factored. Bug fixes should always include appropriate regression tests. Ideally, failing tests should be added first to exercise the bug, with the accompanying patch making the test pass.
 
 3. Code review as knowledge sharing and buy-in.
 
