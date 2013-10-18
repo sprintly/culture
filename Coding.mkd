@@ -3,3 +3,39 @@
 ## Overview
 
 Sprint.ly developers technology products. This requires us to write a lot of code. This document outlines how we approach technology and how we like to code.
+
+## General Principles
+
+1. Codified standards over personal preference.
+
+Syntatic arguments around code are a waste of time. Standards that can be validated with automated tools (such as linters) are preferential.
+
+2. Tests as a driver for well factored code.
+
+Code is tested because it prevents regressions, but also because it positively influences the design of software. Code that is painful to test is likely poorly factored.
+
+3. Code review as knowledge sharing and buy-in.
+
+Code review happens for the following reasons:
+    
+    1. Enforce style. This should ideally be done automatically with linters.
+    
+    2. Communicate changes. In a changing code base, it's important that others have a sense of what is happening and how it's changing.
+    
+    3. Architectural changes. It is useful to have someone look over your code early on to question the structure of your change. This would ideally happen before a lot of time has been invested in the soultion.
+
+    4. Education. Each of us is knowledgeable in different aspects of delivering software. Code review is how we share this knowledge. As such, longer comments explaining a concept are encouraged when you feel they will be helpful. Taking the time to educate others is how we all learn.
+    
+4. Pragmatism over novelty.
+
+Doing something because it is "neat" or "looks cool" is not an acceptable reason for something. This applies as well to code. While using Python's itertools (as an example) might feel "neat", that in itself is not a good reason.
+
+Similarly, we do not encourage NIH or Not Invented Here syndrome in which a company must invent their own technology as others aren't good enough. As a startup, if we are to succeed, we must stand on the shoulders of those in open source who came before us.
+
+5. Optimize for clarity, not brevity.
+
+Legibility of code is paramount. As such, naming is important and should clearly identify intent. Prefer `index` over `idx`. This is not 2002 and vowels aren't a bad thing. One caveat to this rule is when it goes against community guidelines (such as using `i`, `j`, and `k` for loop variables).
+
+6. Automation over one-off.
+
+It is important that we all try to remove ourselves from the critical path as much as possible. As such, we must codify our knowledge in text (preferrably in the form of source code). The way we do this is automation. We seek automation of our infrastructure and deployment process such that it can be done by anyone for this very reason.
