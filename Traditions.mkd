@@ -6,4 +6,10 @@ This document outlines the observed traditions at Sprint.ly.
 
 ## Monday Morning Standups
 
-Every Monday morning we set aside time to join a Google Hangout and discuss what everyone is working on, any blockers, disseminate company information, etc. These are informal, company-wide standups that include everyone, including the executive team.
+Every Monday morning we set aside time to join a Google Hangout and discuss what everyone is working on, any blockers, disseminate company information, etc. These are informal, company-wide stand-ups that include everyone, including the executive team.
+
+##Retrospective
+At the end of a set period (e.g. week, month, big release) we will hold retrospective to talk about what went well and what we could have done better. We should also share stories of goof-ups and also nominate heroes. Sharing goof-ups should be judgment-free. The goal is to encourage transparency and group discussion. Nominating heroes publically acknowledges those who went above and beyond.
+
+##Birthday Hazing
+Birthday hazing should be encouraged and done in a manner that is humorous but puts no one's life in immediate danger.
