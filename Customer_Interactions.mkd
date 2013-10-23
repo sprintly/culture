@@ -3,3 +3,15 @@
 ## Overview
 
 Sprint.ly builds products that we *sell* directly to customers. These products help them run their businesses. How we interact with them, work with them, and communicate with them is important to our success. This document outlines how we expect employees to interact with customers *and* how customers are expected to interact with us.
+
+
+##Communication Channels
+We communicate with our customers through several communication channels: email into support@sprint.ly through Uservoice, social media via Hootsuite and when face-to-face communication is beneficial, through Google Hangout and/or Skype. Opportunities to visit top customers in-person should also be leveraged.
+
+##Communication Tone & Style
+Customer communications will be friendly, respectful and professional. Written communication will be free of spelling and grammatical errors. Content will be accurate and usage instructions will be written in a clear and concise manner. 
+
+If any level of frustration is expressed by the customer, it is important that we confidently acknowledge the frustration before proceeding. Once acknowledged, immediately redirect the communication to answering the customer's original question and/or concern. Acknowledging their frustration will help the customer know that we value them as a customer and more importantly that resolving the question/concern is as important to us as it is to them.
+
+##Turnaround Time
+It is our goal to respond to all Support inquiries as soon as possible and within 24 hours, at latest. 
