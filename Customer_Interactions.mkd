@@ -6,11 +6,28 @@ Sprint.ly builds products that we *sell* directly to customers. These products h
 
 
 ##Communication Channels
-Sprint.ly communicates with our customers through several different channels: email into support@sprint.ly, social media and when face-to-face communication is beneficial, through Google Hangout and/or Skype. In-person meetings with customers are also encouraged.  
+Sprint.ly communicates with our customers through several different channels: email into support@sprint.ly, social media(blogs, YouTube, Twitter, Facebook, and Google+) and when face-to-face communication is beneficial, through Google Hangout and/or Skype. In-person meetings with customers are also encouraged.  
 
 ##Communication Tone & Style
 Customer communications will be friendly, respectful and professional. Written communication will be free of spelling and grammatical errors. Content will be accurate and usage instructions will be written in a clear and concise manner. 
-If any level of frustration is expressed by our customer, we will confidently acknowledge the frustration and then focus the communication on answering the customer's original question and/or concern. 
+If any level of frustration is expressed by our customer, we will confidently acknowledge the frustration and then focus the communication on answering the customer's original question and/or concern. The tone we take with our customers is one of humble equality. We have created a service for them to use and we are humbled when they do. We never present our cusomters with the feeling that we are a huge corporation and that they are a number. The goal here is to treat each customer no matter the medium or customer size as though they are the only concern we have. 
 
 ##Turnaround Time
-It is our goal to respond to all support inquiries as soon as possible and within 24 hours, at latest. 
+It is our goal to respond to all support inquiries as soon as possible and within 24 hours, at latest. Our entire team has been enabled and empowered to respond on behalf of Sprint.ly. Different mediums have different standards for respsonse times, however we like to maintain the quickest possible. Keeping the sentiment that the customer is number one.
+
+##Twitter Policy
+
+ First and foremost, let’s talk as though our Grandmother could read these tweets. No swearing or personal attacks. We are shaping the company’s brand to fall in line with Joe’s “Cool Developer” attitude and want to remain approachable. Although, we are not superior to anyone else, we do know what we are doing. Keep in mind that we are trying to not only introduce a new product to people, but also a new way of doing their job. This document will change over time as our internal tools and brand identity are molded.
+
+Keep it personal -  When messaging on twitter, we want to present people with the image that we are actual people. We are not and should never be, a big building full of unreachable people.  With us being so small, EVERYONE is a customer service representative and you should strive to be personable and helpful.
+
+Resolve in PUBLIC when possible - When people are having issues, don’t immediately try to take the conversation to email. Letting people see us humbly approach customers with issues and resolve them in front of everyone, proves that we stand by our product. Keep in mind, we don’t want to feed the trolls as well. 
+
+Refer to the help files  - Use the help files when assisting people. This trains them to find answers in the future and it keeps us on our toes by keeping the documents up to date. It also demonstrates that we have a well documented product.
+
+Use Hashtags when spreading knowledge  - Check out this document which will change as we move forward: https://docs.google.com/a/sage.ly/document/d/1nciwXYsEx-LT1xIJ7CBTO1QVeecELMy2L6tFXnGIga8/edit
+Make sure, if you are promoting a new blog post or a bit of the theory behind Sprint.ly, that you use the proper hashtags. We need to get into areas where people are talking about project management and using these hashtags will help spread our reach.
+
+Don’t Spill the beans  - Basically, we want to make sure we save the “big bang” for the blog updates and not show people future features that we are still working on. Also, these features could be removed and then we would have made a promise in public that we can’t keep. If you have concerns on features, please reach out to one of the marketing team members first.
+
+Hootsuite Usage - Using Hootsuite as the main client when sending messaging from the Sprint.ly account will stop us from tripping over each other. You can assign tweets to be resolved by internal team members, so let the support engineers handle technical questions as well as billing. Marketing can handle onboarding and newbie/probing questions. 
