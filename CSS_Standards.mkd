@@ -23,7 +23,6 @@ Selector names should always be hyphenated, like so:
 
 ```
 #layout-signup-page .registration-form { ... }
-
 ```
 
 `ids` should generally be avoided for the reasons mentioned above in the **Module** category, but are  acceptable for **Layout** styling, as well as for use by Javascript if necessary.
