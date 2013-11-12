@@ -1,0 +1,104 @@
+# CSS Standards & Conventions
+
+This is a temporary document for Sprint.ly CSS standards which will hopefully be replaced soon by a living styleguide.
+
+## General
+
+Selectors should abide by [The Inception Rule](http://thesassway.com/beginner/the-inception-rule) and should try not to go more than 4 levels deep in order to promote modularity, simplicity, and performance. Simple class names are encouraged, and nesting should only be done if absolutely necessary to avoid being unnecessarily specific. For the same reason, we should generally avoid binding classes to specific elements. For example, `.my-module-title` is preferred over `h3.my-module-title`). Care should be taken to avoid over-classing (classitis) our application as well.
+
+Selector structure should be relatively independent of of the actual HTML markup.
+
+## Categorization
+
+When writing CSS, we generally try to follow the guidelines of [SMACSS](http://smacss.com/) (the whole book is [available online](http://smacss.com/book/)). Your definitions should generally fall in to one of the following categories:
+
+*   **Base**
+    
+    Styling of specific HTML tags, e.g. `body`, which should be used very sparingly
+*   **Layout**
+    
+    Tools for page layout, like grid systems, columns, etc., as well as page types (e.g. "logged out" vs. "logged in" pages) or even specific pages. This is usually styling that modules (see below) will fall into to determine how they are positioned/flowing on a page. Class names in this category must be prefixed with `.layout-`.
+*   **Module**
+    
+    This is where most of the meat is. Module styles should represent styling for a block of content and should be relatively self-contained and avoid too much dependency on other CSS. `id` selectors should almost always be avoided here as `id`s are meant to represent a single element on a page, which is at odds with the concept of modularity.
+
+    For example, in cases where we might have a lot of similar property definitions, it might be tempting to combine selectors like so:
+
+    ```css
+    .my-module,
+    .some-unrelated-module {
+        border: 1px solid #333;
+        color: #ccc;
+        font-family: Helvetica;
+        padding: 5px;
+    }
+    ```
+
+    But we want to avoid this kind of interdependency in our CSS, so an additional class should be used for cases like this:
+
+    ```css
+    .pretty-box {
+        border: 1px solid #333;
+        color: #ccc;
+        font-family: Helvetica;
+        padding: 5px;
+    }
+
+    .my-module {
+        ...
+    }
+
+    .some-unrelated-module {
+        ...
+    }
+    ```
+    ```html
+    <div class="pretty-box my-module">...</div>
+    <div class="pretty-box some-unrelated-module">...</div>
+    ```
+*   **State**
+    
+    Styling for transient element states (usually modules or parts of a module) that can be applied or removed falls here. Class names in this category must be prefixed with `.is-` or `.has-` (or similar), e.g. `.is-active`, `.is-animating`, etc.
+
+## Selectors
+
+Selector names must be hyphenated, like so:
+
+```css
+#layout-signup-page .registration-form { ... }
+```
+
+`ids` should generally be avoided for the reasons mentioned above in the **Module** category, but are  acceptable for **Layout** styling, as well as for use by Javascript if necessary.
+
+## Documentation
+
+Modules with at least a moderate level of complexity should include markup examples in the comments.
+
+Eventually, we would like to use [KSS](https://github.com/kneath/kss) to maintain a living styleguide, so referencing it for your commenting/documentation formatting is encouraged.
+
+## Javascript
+
+When using class names in Javascript where no style is being applied, a `js-` prefix must be used. Class names with a `js-` prefix must *never* be present in a CSS document.
+
+The use case for this is situations where you want to access a specific element, but it doesn't have a meaningful `id` or `class` on it (or doesn't have any at all).
+
+For example, if we wanted to bind some Javascript events to a standard link element, we might do something like this:
+
+```html
+<p>Click <a href="#" class="js-open-info">this thing</a> to get more info.</p>
+```
+```javascript
+$('a.js-open-info').click(function(e) {
+    var view = new InfoView();
+    view.render();
+});
+
+```
+
+## No `clearfix` in the Markup
+
+As our application exists now, a `clearfix` class exists and is being using in countless HTML templates. Eventually these should not exist, as it's unnecessary clutter in the markup. Instead, the `.clearfix()` LESS mixin should be used, which should be applied to an element containing floated elements that need to be cleared.
+
+## (Almost) Never Use `!important`
+
+If you're using `!important`, you are very likely doing something bad. This usually implies that you are trying to override an overly-specific selector (see [The Inception Rule](http://thesassway.com/beginner/the-inception-rule)) and something should probably be refactored.
