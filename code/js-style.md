@@ -16,7 +16,7 @@ Good:
         var x = 1;
         var y = 2;
 
-        var x, y z;
+        var x, y, z;
 
 Bad:
         var x = 1, y, z;
