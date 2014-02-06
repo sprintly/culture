@@ -11,54 +11,58 @@
 - handlebars templates should be loaded with the `hbs!` require extension, not the `text!` require extension.
 - multiple variables are either default-initialized, or separated one per line.
 
-Good:
+```js
+// GOOD
+var x = 1;
+var y = 2;
 
-        var x = 1;
-        var y = 2;
+var x, y, z;
 
-        var x, y, z;
-
-Bad:
-        var x = 1, y, z;
-        var x = 1, y = 2;
+// BAD
+var x = 1, y, z;
+var x = 1, y = 2;
+```
 
 - Do not throw strings as exceptions.
 
-Good:
-
-        throw new Error("text here")
-
-Bad:
-        throw "text here"
-
+```js
+// GOOD
+throw new Error("text here")
+// BAD
+throw "text here"
+```
 - Do not use bitwise operators unless doing actual bit manipulation.
 
-Good:
-        Math.floor(1.2)
+```js
+// GOOD
+Math.floor(1.2)
 
-Bad:
-        ~~1.2  // turns the number into 1
+// BAD
+~~1.2  // turns the number into 1
+```
 
 - Do not use preceeding `+` to convert string to number.
+```js
+// GOOD
+Number('1.2')
 
-Good:
-        Number('1.2')
-
-Bad:
-        +'1.2'
+// BAD
++'1.2'
+```
 
 - Prefer to ellide else statements for ifs that early return.
 
-Good:
+```js
+// GOOD
+if (x) {
+  return 1
+}
+return 2
 
-        if (x) {
-          return 1
-        }
-        return 2
-
-Bad:
-        if (x) {
-          return 1
-        } else {
-          return 2
-        }
+// BAD
+if (x) {
+  return 1
+} else {
+  return 2
+}
+```
