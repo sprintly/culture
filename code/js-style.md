@@ -9,7 +9,8 @@
 - variables should be camelCasedLikeThis not snake_cased_like_this
 - use bower for external dependencies, adding AMD shimming if necessary.
 - handlebars templates should be loaded with the `hbs!` require extension, not the `text!` require extension.
-- multiple variables are either default-initialized, or separated one per line.
+
+##### multiple variables are either default-initialized, or separated one per line.
 
 ```js
 // GOOD
@@ -23,7 +24,7 @@ var x = 1, y, z;
 var x = 1, y = 2;
 ```
 
-- Do not throw strings as exceptions.
+##### Do not throw strings as exceptions.
 
 ```js
 // GOOD
@@ -31,7 +32,7 @@ throw new Error("text here")
 // BAD
 throw "text here"
 ```
-- Do not use bitwise operators unless doing actual bit manipulation.
+##### Do not use bitwise operators unless doing actual bit manipulation.
 
 ```js
 // GOOD
@@ -41,7 +42,7 @@ Math.floor(1.2)
 ~~1.2  // turns the number into 1
 ```
 
-- Do not use preceeding `+` to convert string to number.
+##### Do not use preceeding `+` to convert string to number.
 ```js
 // GOOD
 Number('1.2')
@@ -50,7 +51,7 @@ Number('1.2')
 +'1.2'
 ```
 
-- Prefer to ellide else statements for ifs that early return.
+##### Prefer to ellide else statements for ifs that early return.
 
 ```js
 // GOOD
