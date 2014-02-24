@@ -67,3 +67,15 @@ if (x) {
   return 2
 }
 ```
+
+##### Do not use single-line if statements.
+
+```js
+// GOOD
+if (x) {
+  perform(action);
+}
+
+// BAD
+if (x) perform(action);
+```
