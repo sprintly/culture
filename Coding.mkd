@@ -17,15 +17,15 @@ Code is tested because it prevents regressions, but also because it positively i
 ### Code review as knowledge sharing and buy-in.
 
 Code review happens for the following reasons:
-    
+
 1. Enforce style. This should ideally be done automatically with linters.
-    
+
 2. Communicate changes. In a changing code base, it's important that others have a sense of what is happening and how it's changing.
-    
+
 3. Architectural changes. It is useful to have someone look over your code early on to question the structure of your change. This would ideally happen before a lot of time has been invested in the soultion.
 
 4. Education. Each of us is knowledgeable in different aspects of delivering software. Code review is how we share this knowledge. As such, longer comments explaining a concept are encouraged when you feel they will be helpful. Taking the time to educate others is how we all learn.
-    
+
 ### Pragmatism over novelty.
 
 Doing something because it is "neat" or "looks cool" is not an acceptable reason for something. This applies as well to code. While using Python's itertools (as an example) might feel "neat", that in itself is not a good reason.
@@ -36,8 +36,23 @@ Similarly, we do not encourage NIH or Not Invented Here syndrome in which a comp
 
 Legibility of code is paramount. As such, naming is important and should clearly identify intent. Prefer `index` over `idx`. This is not 2002 and vowels aren't a bad thing. One caveat to this rule is when it goes against community guidelines (such as using `i`, `j`, and `k` for loop variables).
 
-Code comments play a large role when it comes to clarity. Commenting is necessary when coding in teams. Docstrings highlighting the function of a code block are encouraged. 
+Code comments play a large role when it comes to clarity. Commenting is necessary when coding in teams. Docstrings highlighting the function of a code block are encouraged.
 
 ### Automation over one-off.
 
 It is important that we all try to remove ourselves from the critical path as much as possible. As such, we must codify our knowledge in text (preferrably in the form of source code). The way we do this is automation. We seek automation of our infrastructure and deployment process such that it can be done by anyone for this very reason.
+
+## Tactical Guidelines
+
+### Sizing tickets
+
+When it comes to sizing tickets, there are a few guidelines.
+
+First, you should always size your tickets. It helps us get an understanding of how big something is. The exception to this rule is don't size stories if you're going to size the subitems. We prefer subitems to be sized.
+
+- The **small** estimation means "I know exactly what needs to happen, I just need to do it. It requires minimal thought."
+- The **medium** estimation means "I have a sense of what needs to happen. There's some ambiguity and I expect I'll probably hit a minor setback."
+- The **large** estimation means "This requires substantial thought on my part and the code involved is risky."
+- The **xlarge** estimation means "I don't actually know what this task entails."
+
+Given those, **never size tasks as XL**. It should likely be a story with sized subitems instead.
