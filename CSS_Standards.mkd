@@ -62,13 +62,21 @@ When writing CSS, we generally try to follow the guidelines of [SMACSS](http://s
 
 ## Selectors
 
-Selector names must be hyphenated, like so:
+Selector names must be lower case and hyphenated, like so:
 
 ```css
 #layout-signup-page .registration-form { ... }
 ```
 
 `ids` should generally be avoided for the reasons mentioned above in the **Module** category, but are  acceptable for **Layout** styling, as well as for use by Javascript if necessary.
+
+## LESS
+
+Similar to selectors, all LESS variables must be lower case and hyphenated like so:
+
+```less
+@dark-grey: #222;
+```
 
 ## Documentation
 
@@ -78,14 +86,19 @@ Eventually, we would like to use [KSS](https://github.com/kneath/kss) to maintai
 
 ## Javascript
 
-When using class names in Javascript where no style is being applied, a `js-` prefix must be used. Class names with a `js-` prefix must *never* be present in a CSS document.
+When using class names in Javascript, a `js-` prefix must be used. Class names with a `js-` prefix must *never* be present in a CSS document and if the element in question must be styled, it must 
+have an additional, non-js-prefixed CSS class applied to it. The purpose of this is to keep our Javascript code as decoupled from our CSS as we can so that, for example, if you wanted to 
+add/remove/modify class names, it doesn't break any Javascript functionality.
 
-The use case for this is situations where you want to access a specific element, but it doesn't have a meaningful `id` or `class` on it (or doesn't have any at all).
-
-For example, if we wanted to bind some Javascript events to a standard link element, we might do something like this:
+Example:
 
 ```html
-<p>Click <a href="#" class="js-open-info">this thing</a> to get more info.</p>
+<p>Click <a href="#" class="open-info-link js-open-info">this thing</a> to get more info.</p>
+```
+```css
+.open-info-link {
+    color: red;
+}
 ```
 ```javascript
 $('a.js-open-info').click(function(e) {
