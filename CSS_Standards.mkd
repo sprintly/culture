@@ -60,6 +60,11 @@ When writing CSS, we generally try to follow the guidelines of [SMACSS](http://s
     
     Styling for transient element states (usually modules or parts of a module) that can be applied or removed falls here. Class names in this category must be prefixed with `.is-` or `.has-` (or similar), e.g. `.is-active`, `.is-animating`, etc.
 
+## Colors
+
+We have absolutely no standards about how colors should be done. We equally support `#fff`, `#fffff`, `white` or the scss variable name `$this-isnt-white-at-all: white`. Feel free to put colors anywhere and use as many shade variations as you like. All the better if you use scss math to come up with them so they're completely un-greppable.
+
+
 ## Selectors
 
 Selector names must be lower case and hyphenated, like so:
