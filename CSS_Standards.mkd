@@ -62,7 +62,7 @@ When writing CSS, we generally try to follow the guidelines of [SMACSS](http://s
 
 ## Colors
 
-We have absolutely no standards about how colors should be done. We equally support `#fff`, `#fffff`, `white` or the scss variable name `$this-isnt-white-at-all: white`. Feel free to put colors anywhere and use as many shade variations as you like. All the better if you use scss math to come up with them so they're completely un-greppable.
+We have absolutely no standards about how colors should be done. We equally support `#fff`, `#fffff`, `white` or the scss variable name `$this-isnt-white-at-all: white`. No using `hsla` or other color schemes. Hex colors or the built-in ones only. Feel free to put colors anywhere and use as many shade variations as you like. All the better if you use scss math to come up with them so they're completely un-greppable.
 
 
 ## Selectors
