@@ -105,30 +105,30 @@ This means that there's a balance to be achieved between ideal code and
 shipping useful things. Here are some ideas about what might trigger a
 *discussion* of refactoring.
 
-1. New mechanism discovered since code was written.
+#### New mechanism discovered since code was written.
 
 One example is that we used to do repeated `this.listenTo` calls in backbone
 views, but realized that backbone offers a syntax for speeding up repeated
 calls. The fix is minor, but it's applied inconsistently through our codebase.
 
-2. Second implementation of something you already know exists.
+#### Second implementation of something you already know exists.
 
 If you recognize a pattern of something we're doing, suggest combining
 implementations. This keeps common code paths from diverging.
 
-3. Difficult to understand code.
+#### Difficult to understand code.
 
 If code is difficult to understand during code review, it'll also be difficult
 to understand when there's a bug in it. Asking someone to clear things up to
 make it easier to read is a nice thing to do for people who come to the code
 later.
 
-4. Future product plans
+#### Future product plans
 
 If there are future product plans that are easier now than they will be later,
 feel free to make the suggestion to change it now.
 
-5. Implementation strategy the other person might not know about.
+#### Implementation strategy the other person might not know about.
 
 If you know of a way of doing something that someone else might not know about,
 consider suggesting it if it adds value.
