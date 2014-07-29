@@ -9,6 +9,7 @@
 - variables should be camelCasedLikeThis not snake_cased_like_this
 - use bower for external dependencies, adding AMD shimming if necessary.
 - handlebars templates should be loaded with the `hbs!` require extension, not the `text!` require extension.
+- We do not write jsdoc, preferring instead long form comments at the top of the class only.
 
 ##### multiple variables are either default-initialized, or separated one per line.
 
