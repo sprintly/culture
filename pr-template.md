@@ -7,6 +7,7 @@
 #### Definition of Done:
 - [ ] Is there appropriate test coverage? (e.g. ChefSpec, Mocha/Chai, Python, etc.)
 - [ ] Does this PR require a Selenium test? (e.g. Browser-specific bugs or complicated UI bugs)
+- [ ] Did you run Selenium tests? (Travis does not run them.)
 - [ ] Does this PR require a regression test? All fixes require a regression test.
 - [ ] Does this PR require a blog post? If so, ensure marketing has signed off on content.
 - [ ] Does the [knowledge base](https://sprint.ly/docs) need to be updated?
