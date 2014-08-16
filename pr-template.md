@@ -4,6 +4,7 @@
 #### Any background context you want to provide?
 #### What are the relevant tickets?
 #### Screenshots (if appropriate)
+#### What gif best describes this PR or how it makes you feel?
 #### Definition of Done:
 - [ ] Is there appropriate test coverage? (e.g. ChefSpec, Mocha/Chai, Python, etc.)
 - [ ] Does this PR require a Selenium test? (e.g. Browser-specific bugs or complicated UI bugs)
