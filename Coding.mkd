@@ -30,7 +30,7 @@ Code review happens for the following reasons:
 
 Doing something because it is "neat" or "looks cool" is not an acceptable reason for something. This applies as well to code. While using Python's itertools (as an example) might feel "neat", that in itself is not a good reason.
 
-Similarly, we do not encourage NIH or Not Invented Here syndrome in which a company must invent their own technology as others aren't good enough. As a startup, if we are to succeed, we must stand on the shoulders of those in open source who came before us.
+Similarly, we do not encourage NIH or [Not Invented Here](http://en.wikipedia.org/wiki/Not_invented_here) syndrome in which a company must invent their own technology as others aren't good enough. As a startup, if we are to succeed, we must stand on the shoulders of those in open source who came before us.
 
 ### Optimize for clarity, not brevity.
 
