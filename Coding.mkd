@@ -22,7 +22,7 @@ Code review happens for the following reasons:
 
 2. Communicate changes. In a changing code base, it's important that others have a sense of what is happening and how it's changing.
 
-3. Architectural changes. It is useful to have someone look over your code early on to question the structure of your change. This would ideally happen before a lot of time has been invested in the soultion.
+3. Architectural changes. It is useful to have someone look over your code early on to question the structure of your change. This would ideally happen before a lot of time has been invested in the solution.
 
 4. Education. Each of us is knowledgeable in different aspects of delivering software. Code review is how we share this knowledge. As such, longer comments explaining a concept are encouraged when you feel they will be helpful. Taking the time to educate others is how we all learn.
 
