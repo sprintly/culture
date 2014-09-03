@@ -94,3 +94,11 @@ First, you should always size your tickets. It helps us get an understanding of 
 - The **xlarge** estimation means "I don't actually know what this task entails."
 
 Given those, **never size tasks as XL**. It should likely be a story with sized subitems instead.
+
+### GitHub labels
+
+To help expidite the code review process, we use a system of labels to get an at-a-glance view of open PRs.
+
+- "in review" implies that there was an ongoing discussion involved, but would be ready to be merged when those things were satisfied
+- "wip" means "work in progress". It's not ready for review. Sometimes PRs enter into this state if there are larger changes that need to happen.
+- "needs test" is for things that lack necessary test coverage for merge, but are otherwise fine.
