@@ -12,12 +12,22 @@ As a ___ I did ___ and expected ___ but experienced ___.
 
 #### URL where bug was observed: 
 
-#### Screenshot: 
+#### Screenshot / Screencast: 
 
 #### Environment:
 
 - [ ] Local
 - [ ] Staging
 - [ ] Production
+
+**Logged in?** [Yes / No]
+
+**Logged in as:**
+
+#### Customer contact
+
+**Email:**
+
+**Uservoice Ticket URL:**
 
 #### Comments:
