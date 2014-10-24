@@ -19,14 +19,14 @@ def _send_lookout_payload(action, instance):
 def test_payload_is_created_and_sent_correctly(self):
     item = ItemFactory.create()
     with override_settings(TESTS_ARE_RUNNING=False):
-      with mock.patch('wasatch.tasks') as mocked_tasks:
-        signals._send_lookout_payload('created', item)
-        payload = {
-            'action': 'created',
-            'model': 'Item',
-            'attributes': model_to_json(item, expand=True),
-            'product': model_to_json(item.product)
-        }
-        mocked_tasks.send_lookout_payload.delay.assert_called_with(item.product.pk,
-            bz2.compress(json.dumps(payload)))
+        with mock.patch('wasatch.tasks') as mocked_tasks:
+            signals._send_lookout_payload('created', item)
+            payload = {
+                'action': 'created',
+                'model': 'Item',
+                'attributes': model_to_json(item, expand=True),
+                'product': model_to_json(item.product)
+            }
+            mocked_tasks.send_lookout_payload.delay.assert_called_with(item.product.pk,
+                bz2.compress(json.dumps(payload)))
 ```
