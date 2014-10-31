@@ -1,0 +1,9 @@
+# Architecture and Operations
+
+## Architecture 
+
+### Infrastructure
+
+Sprintly runs almost entirely on top of AWS. We use RDS to power our DB, EC2 for our application servers, ELB for load 
+balancing, S3 for file storage, SQS for our queues, CloudWatch for monitoring, and DynamoDB for key/value data. In 
+addition to 
