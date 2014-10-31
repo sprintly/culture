@@ -4,6 +4,34 @@
 
 ### Infrastructure
 
-Sprintly runs almost entirely on top of AWS. We use RDS to power our DB, EC2 for our application servers, ELB for load 
-balancing, S3 for file storage, SQS for our queues, CloudWatch for monitoring, and DynamoDB for key/value data. In 
-addition to 
+Sprintly runs almost entirely on top of AWS. We use RDS to power our DB, EC2 for our application servers, ELB for load balancing, S3 for file storage, SQS for our queues, CloudWatch for monitoring, and DynamoDB for key/value data. In addition to AWS, we utilize a number of other SaaS/cloud solutions:
+
+* [EmailYak](http://www.emailyak.com/) – Handles our [inbound email gateway](https://sprintly.uservoice.com/knowledgebase/articles/149900-creating-items-via-email). 
+* [Transloadit](https://transloadit.com/) – Processes our file uploads before depositing them in S3.
+* [Postmark](https://postmarkapp.com/) – Sends all of our transactional email.
+* [MailChimp](http://mail.quickleft.com/) – Handles our email lists.
+* [Recurly](https://recurly.com) – Implements PCI compliance so we don't have to.
+* [Sentry](https://getsentry.com) – An exception logging service. We've tried all of them and settled on Sentry for two reasons: 1. A few of us know the authors/maintainers, 2. The underlying tool is open source; we can move to it without much effort if the service were to go offline for good.
+* [Pusher](https://pusher.com/) – Handles sending push events to the client. We chose this because we have a relationship with the founders and there are a number of open source products that mimic its API giving us a simple migration option.
+* [Embedly](http://embed.ly/) – A SaaS solution for the [oEmbed](http://oembed.com/) specification. It includes a number of sources that do not implement the oEmbed specification and also integrates with APIs to further enrich data provided by an oEmbed endpoint.
+
+#### Considerations for New Infrastructure
+
+* We are a small team; whenever possible we defer management of operations to services ran by people we presume know much more about running a given piece of infrastructure than we do. e.g. Amazon serves billions of requests with thousands of servers; let's use EC2 because there's no way we'll manage data centers as effectively and economically as Amazon can.
+* If possible, choose service providers that provide a reasonably easy migration path. e.g. The fact that [Slanger](https://github.com/stevegraham/slanger) exists, makes Pusher more attractive than other options.
+* When choosing a service or tool we optimize for recouping developer hours. It's useful to consider that the average hourly rate at Sprintly is $30-50/hr. Every hour a tool could reasonably be execpted to save per month should be weighted against the increased cost for a better tool. If Tool A will save an additional 5 hours a month over Tool B, and Tool A costs $50 more per month, we should spend the extra $50 per month vs. spending upwards of $250 in labor each month using a subpar tool.
+* We give preference to services, tools, and code that is written or maintained by people we personally know. 
+
+#### Considerations for New Code
+
+* Whenever possible we use tooling and infrastructure that is already in place. Launching new services alongside new features increases risk. 
+* If possible, defer operations to the queue. Often we do this by firing a queue job from a Django signal.
+* Is storing it in the DB the best spot for this data? We're a very heavy JavaScript application; there's nothing wrong with storing data in DynamoDB or even S3 as a JSON file.
+* Layer in caching only after it's proven to be needed.
+
+## Operations
+
+### Continuous Integration
+
+* [Travis-CI](https://travis-ci.org) – We use, and have used, a number of tools for CI. Quick Left as a whole uses Travis-CI, CircleCI, and Drone. Sprintly [used to use](http://blog.sprint.ly/post/22794189287/nerd-alert-sprint-lys-continuous-integration) Jenkins, but moved away mostly due to a lack of inherent PR support and cost of maintenance.
+* [Saucelabs](http://saucelabs.com/) – Manages running all of our Selenium browser tests.
