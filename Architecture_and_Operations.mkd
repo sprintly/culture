@@ -14,6 +14,7 @@ Sprintly runs almost entirely on top of AWS. We use RDS to power our DB, EC2 for
 * [Sentry](https://getsentry.com) – An exception logging service. We've tried all of them and settled on Sentry for two reasons: 1. A few of us know the authors/maintainers, 2. The underlying tool is open source; we can move to it without much effort if the service were to go offline for good.
 * [Pusher](https://pusher.com/) – Handles sending push events to the client. We chose this because we have a relationship with the founders and there are a number of open source products that mimic its API giving us a simple migration option.
 * [Embedly](http://embed.ly/) – A SaaS solution for the [oEmbed](http://oembed.com/) specification. It includes a number of sources that do not implement the oEmbed specification and also integrates with APIs to further enrich data provided by an oEmbed endpoint.
+* [TraceView](http://www.appneta.com/products/traceview/) – Full-stack application tracing. We use it to find out what parts of teh application are slowing us down.
 
 #### Considerations for New Infrastructure
 
