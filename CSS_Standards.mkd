@@ -8,7 +8,7 @@ Selectors should abide by [The Inception Rule](http://thesassway.com/beginner/th
 
 Selector structure should be relatively independent of of the actual HTML markup.
 
-## Categorization
+## Categorization & Organization
 
 When writing CSS, we generally try to follow the guidelines of [SMACSS](http://smacss.com/) (the whole book is [available online](http://smacss.com/book/)). Your definitions should generally fall in to one of the following categories:
 
@@ -65,7 +65,7 @@ When writing CSS, we generally try to follow the guidelines of [SMACSS](http://s
 Selector names must be lower case and hyphenated, like so:
 
 ```css
-#layout-signup-page .registration-form { ... }
+.layout-signup-page .registration-form { ... }
 ```
 
 `ids` should generally be avoided for the reasons mentioned above in the **Module** category, but are  acceptable for **Layout** styling, as well as for use by Javascript if necessary.
