@@ -159,7 +159,7 @@ $dark-grey: #222;
 
 Sprintly has a SASS file completely dedicated to all the colors in use on the site: `html/static/scss/base/_colors.scss`. It consists, first, of a set of color names (e.g. `$darker-lime`) followed by
 a small set of contextual assignments (e.g. `$story-highlight-color: $lime`). You should use these color variables rather than hex values unless you're using a one-off color, and you should create a 
-contetual assignment in this file if it's for something that has relatively widespread use on the site.
+contextual assignment in this file if it's for something that has relatively widespread use on the site.
 
 ## Documentation
 
