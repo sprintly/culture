@@ -1,0 +1,32 @@
+## Mocking
+
+It's important that all unit tests are 100% mocked. Our unit test suite should run without any internet connection. (This is why I like writing tests on airplanes; keeps you honest.)
+
+### Mocking `import` inside a function
+
+To avoid circular imports in `models`, `signals`, and `tasks`, we often import the models or tasks we need within the calling function. Below is an example of mocking a function that imports `tasks`.
+
+
+```python
+
+# In signals
+def _send_lookout_payload(action, instance):
+    from wasatch import tasks
+    # ...
+    tasks.send_lookout_payload.delay(payload)
+
+# In your tests file
+def test_payload_is_created_and_sent_correctly(self):
+    item = ItemFactory.create()
+    with override_settings(TESTS_ARE_RUNNING=False):
+        with mock.patch('wasatch.tasks') as mocked_tasks:
+            signals._send_lookout_payload('created', item)
+            payload = {
+                'action': 'created',
+                'model': 'Item',
+                'attributes': model_to_json(item, expand=True),
+                'product': model_to_json(item.product)
+            }
+            mocked_tasks.send_lookout_payload.delay.assert_called_with(item.product.pk,
+                bz2.compress(json.dumps(payload)))
+```
