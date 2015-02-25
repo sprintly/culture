@@ -1,7 +1,6 @@
 # Javascript coding convention.
 
 - 2 space indents.
-- private methods begin with preceeding underscore.
 - all new classes have a documentation block describing their responsibility.
 - constants are ALL_UPPER_CASE
 - Everything must pass jshint using the checked in config.
