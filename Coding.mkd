@@ -95,6 +95,61 @@ First, you should always size your tickets. It helps us get an understanding of 
 
 Given those, **never size tasks as XL**. It should likely be a story with sized subitems instead.
 
+### Giving feedback to Code Review.
+
+When giving feedback on a code review, the chief concerns are to end up with
+code that is well formed, well tested code that solves actual user problems is
+shipped to production.
+
+This means that there's a balance to be achieved between ideal code and
+shipping useful things. Here are some ideas about what might trigger a
+*discussion* of refactoring.
+
+#### New mechanism discovered since code was written.
+
+One example is that we used to do repeated `this.listenTo` calls in backbone
+views, but realized that backbone offers a syntax for speeding up repeated
+calls. The fix is minor, but it's applied inconsistently through our codebase.
+
+#### Second implementation of something you already know exists.
+
+If you recognize a pattern of something we're doing, suggest combining
+implementations. This keeps common code paths from diverging. See also, [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
+
+#### Difficult to understand code.
+
+If code is difficult to understand during code review, it'll also be difficult
+to understand when there's a bug in it. Asking someone to clear things up to
+make it easier to read is a nice thing to do for people who come to the code
+later. [Avoid cleverness](https://github.com/sprintly/sprint.ly-culture/blob/master/Coding.mkd#pragmatism-over-novelty).
+
+#### Future product plans
+
+If there are future product plans that are easier now than they will be later,
+feel free to make the suggestion to change it now.
+
+#### Implementation strategy the other person might not know about.
+
+If you know of a way of doing something that someone else might not know about,
+consider suggesting it if it adds value. If it doesn't add value, feel free to
+mention it for education reasons, but make it clear that a change isn't warranted.
+
+### Responding to Code Review.
+
+Code review comments are up for debate unless otherwise said.
+
+A few possible responses to a code review comment.
+
+1. Do the thing they ask. In 90% of all code review comments, the correct answer is to just do it.
+2. Push back on the change.
+  1. This could be due to some knowledge you have that they don't. One example there is [this PR](https://raw.githubusercontent.com/sprintly/sprint.ly-culture/master/_linked-to/time-limited-code.png) where we were editing code that would only live a few weeks longer, so more investment in it didn't make a ton of sense.
+  2. This could be because you disagree with the approach. Disagreement is okay. Make your case. If the other person feels strongly about it, talk it out in Slack.. 
+  3. Seek an outside perspective. If available, pull in a more veteran person from the team.
+3. Answer the question they have. A lot of comments amount to "Why are we doing it like this?" or "Have you thought about how this affects this other component?". Answer honestly and make changes as necessary.
+
+Overall, our goals should be to ship good code. As with all things, there is a
+balance and a learning process involved.
+
 ### GitHub labels
 
 To help expidite the code review process, we use a system of labels to get an at-a-glance view of open PRs.
