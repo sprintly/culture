@@ -131,7 +131,8 @@ feel free to make the suggestion to change it now.
 #### Implementation strategy the other person might not know about.
 
 If you know of a way of doing something that someone else might not know about,
-consider suggesting it if it adds value.
+consider suggesting it if it adds value. If it doesn't add value, feel free to
+mention it for education reasons, but make it clear that a change isn't warranted.
 
 ### Responding to Code Review.
 
