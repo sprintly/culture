@@ -121,7 +121,7 @@ implementations. This keeps common code paths from diverging. See also, [DRY](ht
 If code is difficult to understand during code review, it'll also be difficult
 to understand when there's a bug in it. Asking someone to clear things up to
 make it easier to read is a nice thing to do for people who come to the code
-later.
+later. [Avoid cleverness](https://github.com/sprintly/sprint.ly-culture/blob/master/Coding.mkd#pragmatism-over-novelty).
 
 #### Future product plans
 
