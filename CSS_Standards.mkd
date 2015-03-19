@@ -2,22 +2,36 @@
 
 This is a temporary document for Sprint.ly CSS standards which will hopefully be replaced soon by a living styleguide.
 
+## Tools
+
+We use the following for Sprintly CSS development:
+
+* [SASS](http://sass-lang.com) (CSS precompiler)
+* [Compass](http://compass-style.org/) (CSS helpers)
+* [Susy](http://susydocs.oddbird.net) (Grid framework)
+* [Breakpoint](http://breakpoint-sass.com/) (Simple media queries)
+
 ## General
 
 Selectors should abide by [The Inception Rule](http://thesassway.com/beginner/the-inception-rule) and should try not to go more than 4 levels deep in order to promote modularity, simplicity, and performance. Simple class names are encouraged, and nesting should only be done if absolutely necessary to avoid being unnecessarily specific. For the same reason, we should generally avoid binding classes to specific elements. For example, `.my-module-title` is preferred over `h3.my-module-title`). Care should be taken to avoid over-classing (classitis) our application as well.
 
 Selector structure should be relatively independent of of the actual HTML markup.
 
-## Categorization
+## Categorization & Organization
 
 When writing CSS, we generally try to follow the guidelines of [SMACSS](http://smacss.com/) (the whole book is [available online](http://smacss.com/book/)). Your definitions should generally fall in to one of the following categories:
 
 *   **Base**
     
-    Styling of specific HTML tags, e.g. `body`, which should be used very sparingly
+    Styling of specific HTML tags, e.g. `body`, which should be used very sparingly.
+
+    For Sprintly, this styling lives under `html/static/scss/base/_html.scss`, and any styling or configuration that is globally (or almost globally) used should go under the `base/` directory.
 *   **Layout**
     
-    Tools for page layout, like grid systems, columns, etc., as well as page types (e.g. "logged out" vs. "logged in" pages) or even specific pages. This is usually styling that modules (see below) will fall into to determine how they are positioned/flowing on a page. Class names in this category must be prefixed with `.layout-`.
+    Tools for page layout, like grid systems, columns, etc., as well as page types (e.g. "logged out" vs. "logged in" pages) or even specific pages. This is usually styling that modules (see below) will fall into to 
+    determine how they are positioned/flowing on a page. Class names in this category must be prefixed with `.layout-*`.
+
+    For Sprintly, all layout styles should go under `html/static/scss/layouts/`.
 *   **Module**
     
     This is where most of the meat is. Module styles should represent styling for a block of content and should be relatively self-contained and avoid too much dependency on other CSS. `id` selectors should almost always be avoided here as `id`s are meant to represent a single element on a page, which is at odds with the concept of modularity.
@@ -56,27 +70,96 @@ When writing CSS, we generally try to follow the guidelines of [SMACSS](http://s
     <div class="pretty-box my-module">...</div>
     <div class="pretty-box some-unrelated-module">...</div>
     ```
+
+    For Sprintly, module styles should be contained into their own file under `html/static/scss/modules/`.
 *   **State**
     
-    Styling for transient element states (usually modules or parts of a module) that can be applied or removed falls here. Class names in this category must be prefixed with `.is-` or `.has-` (or similar), e.g. `.is-active`, `.is-animating`, etc.
+    Styling for transient element states (usually modules or parts of a module) that can be applied or removed falls here. Class names in this category must be prefixed with `.is-` or `.has-` (or similar), 
+    e.g. `.is-active`, `.is-animating`, etc.
+
+    For Sprintly, all element states should live right inline with their modules, e.g.:
+
+    ```sass
+    .login-modal {
+        background-color: #fff;
+        border: 1px solid #ccc;
+
+        &.is-active {
+            border-color: #f60;
+        }
+    }
+    ```
 
 ## Selectors
 
 Selector names must be lower case and hyphenated, like so:
 
 ```css
-#layout-signup-page .registration-form { ... }
+.layout-signup-page .registration-form { ... }
 ```
 
 `ids` should generally be avoided for the reasons mentioned above in the **Module** category, but are  acceptable for **Layout** styling, as well as for use by Javascript if necessary.
 
-## LESS
+## Responsive
 
-Similar to selectors, all LESS variables must be lower case and hyphenated like so:
+All new pages should be built with a "responsive first" approach. This means that all default styles should display nicely on a mobile device, and media queries should be used to modify 
+styles for larger screens/window sizes. Mobile and desktop are the priority, with tablet variations being strongly encouraged. There are only 2 breakpoints, which you can find under `html/static/scss/base/_base.scss`, 
+and they are: `$small-breakpoint` and `$medium-breakpoint`. Screen sizes lower than `$small-breakpoint` are considered "mobile", between `$small-breakpoint` and `$medium-breakpoint` are "tablet", 
+and anything larger is "desktop".
 
-```less
-@dark-grey: #222;
+When styling for responsive, you should keep your screen size variations distinct, but grouped closely so they are easy to find and maintain. Example:
+
+```sass
+.layout-article {
+    .content-column {
+        @include span(12);
+    }
+
+    .sidebar-column {
+        @include span(12);
+    }
+
+    // Tablet styles
+
+    @include breakpoint($small-breakpoint) {
+        .content-column {
+            @include span(6);
+        }
+
+        .sidebar-column {
+            @include span(6);
+        }
+    }
+
+    // Desktop styles
+
+    @include breakpoint($small-breakpoint) {
+        .content-column {
+            @include span(8);
+        }
+
+        .sidebar-column {
+            @include span(4);
+        }
+    }
+}
 ```
+
+
+
+## SASS
+
+Similar to selectors, all SASS variables must be lower case and hyphenated like so:
+
+```sass
+$dark-grey: #222;
+```
+
+## Colors
+
+Sprintly has a SASS file completely dedicated to all the colors in use on the site: `html/static/scss/base/_colors.scss`. It consists, first, of a set of color names (e.g. `$darker-lime`) followed by
+a small set of contextual assignments (e.g. `$story-highlight-color: $lime`). You should use these color variables rather than hex values unless you're using a one-off color, and you should create a 
+contextual assignment in this file if it's for something that has relatively widespread use on the site.
 
 ## Documentation
 
