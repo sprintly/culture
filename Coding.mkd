@@ -114,7 +114,7 @@ calls. The fix is minor, but it's applied inconsistently through our codebase.
 #### Second implementation of something you already know exists.
 
 If you recognize a pattern of something we're doing, suggest combining
-implementations. This keeps common code paths from diverging.
+implementations. This keeps common code paths from diverging. See also, [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
 #### Difficult to understand code.
 
