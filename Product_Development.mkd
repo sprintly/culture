@@ -8,7 +8,7 @@ Everyone at Sprint.ly is responsible for ensuring that we develop the very best 
 
 - We deploy at least once a week (Monday - Thursday).
 - Product Manager initiates the deploy process.
-- The PM picks a build number from Travis (whichever is the newest green build). Asks a dev to push that build number to `staging`. 
+- The PM picks a build number from Travis (the latest green master build). Asks a dev to push that build number to `staging`. 
 - Mark items in Sprintly as `deployed to staging`.
 - Give QA a heads up to test on `staging` (they have a general checklist). PM tests specific changes in the build.
 - Once there’s a thumbs up from everybody, PM decides if a knowledgebase or blog post is required.
