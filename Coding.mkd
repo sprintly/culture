@@ -76,7 +76,7 @@ Okay use of inline comments:
         # must handle those ourself.
         acct.expire()
 
-### Automation over one-off.
+### Automation over one-off
 
 It is important that we all try to remove ourselves from the critical path as much as possible. As such, we must codify our knowledge in text (preferrably in the form of source code). The way we do this is automation. We seek automation of our infrastructure and deployment process such that it can be done by anyone for this very reason.
 
