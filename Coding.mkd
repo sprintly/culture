@@ -143,7 +143,7 @@ A few possible responses to a code review comment.
 1. Do the thing they ask. In 90% of all code review comments, the correct answer is to just do it.
 2. Push back on the change.
   1. This could be due to some knowledge you have that they don't. One example there is [this PR](https://raw.githubusercontent.com/sprintly/sprint.ly-culture/master/_linked-to/time-limited-code.png) where we were editing code that would only live a few weeks longer, so more investment in it didn't make a ton of sense.
-  2. This could be because you disagree with the approach. Disagreement is okay. Make your case. If the other person feels strongly about it, talk it out in Slack.. 
+  2. This could be because you disagree with the approach. Disagreement is okay. Make your case. If the other person feels strongly about it, talk it out in Slack. 
   3. Seek an outside perspective. If available, pull in a more veteran person from the team.
 3. Answer the question they have. A lot of comments amount to "Why are we doing it like this?" or "Have you thought about how this affects this other component?". Answer honestly and make changes as necessary.
 
@@ -152,7 +152,7 @@ balance and a learning process involved.
 
 ### GitHub labels
 
-To help expidite the code review process, we use a system of labels to get an at-a-glance view of open PRs.
+To help expedite the code review process, we use a system of labels to get an at-a-glance view of open PRs.
 
 - "in review" implies that there was an ongoing discussion involved, but would be ready to be merged when those things were satisfied
 - "wip" means "work in progress". It's not ready for review. Sometimes PRs enter into this state if there are larger changes that need to happen.
