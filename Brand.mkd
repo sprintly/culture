@@ -9,3 +9,12 @@ This guide provides guidelines for how we communicate the Sprintly brand to the 
 **Company name**: written as "Sprintly" (with no period)
 
 **Logos**: You can find up-to-date logos and other brand assets here: https://brandfolder.com/sprintly
+
+### Sub-brand: Partyline
+
+#### Description
+Partyline helps Slack users to manage projects right in group chat. Teams are already using Slack to communicate: discussing customer feedback and feature ideas. With Partyline, users can create new tickets or update and delete existing ones using Slack commands. Their whole team gets notified instantly when new items are created.
+
+**Brand name**: written as "Partyline"
+
+**Logo**: Currently uses Google's [Yellowtail font](https://www.google.com/fonts/specimen/Yellowtail) for the main wordmark, in #439fe1 blue.
