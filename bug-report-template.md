@@ -28,6 +28,6 @@ As a ___ I did ___ and expected ___ but experienced ___.
 
 **Email:**
 
-**Uservoice Ticket URL:**
+**Zendesk Ticket URL:**
 
 #### Comments:
